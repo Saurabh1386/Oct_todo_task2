@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function bubbleSort(nums){
+            let n = nums.length;
+            for(let i=1; i<n; i++){
+            for(let j=1; j<=n-i; j++){
+        if(nums[j ] < nums[j-1]){
+            let temp = nums[j];
+            nums[j] = nums[j-1];
+            nums[j-1] = temp;
+        }
+            }
+        }
+        return nums;
+    }
+
+    let nums = [3,0,3,5,7,6,4];
+    let sorted = bubbleSort(nums);
+    console.log(sorted);
+    </script>
+</body>
+</html>
